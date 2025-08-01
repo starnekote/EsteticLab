@@ -49,7 +49,7 @@
 
 @font-face {
   font-family: 'Lovelace';
-  src: url('./fonts/Lovelace-Regular.ttf') format('ttf');
+  src: url('./fonts/Lovelace-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -67,6 +67,14 @@ a {
     text-decoration: none;
 }
 
+h1 {
+  font-family: 'Lovelace';
+  font-weight: 400;
+}
+
+h2 {
+  font-family: 'Cormorant';
+}
 
 /* МЕНЮ */
 .menu ul {
@@ -92,3 +100,18 @@ a {
 }
 
 /* ШАПКА */
+.header {
+  display: flex;
+}
+
+.header h1{
+  font-size: 86px;
+  color: var(--text-accent);
+  position: relative;
+  margin-bottom: -47px;
+  margin-top: 39px;
+}
+
+.header h2 {
+  font-size: 46px;
+}
