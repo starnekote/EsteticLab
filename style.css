@@ -57,6 +57,38 @@
 body {
     margin: 0;
     background-color: #FDFDFD;
+    color: var(--text-dark);
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 960px;
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  justify-content: space-between;
+}
+.col-3 {
+  width: 25%;
+}
+.col-4 {
+  width: 33.33%;
+}
+.col-6 {
+  width: 50%;
+}
+.col-8 {
+  width: 66.66%;
+}
+.col-9 {
+  width: 75%;
+}
+.col-12 {
+  width: 100%;
 }
 
 ul {
@@ -65,6 +97,7 @@ ul {
 
 a {
     text-decoration: none;
+    color: var(--text-dark);
 }
 
 h1 {
@@ -73,7 +106,21 @@ h1 {
 }
 
 h2 {
+  margin: 0;
   font-family: 'Cormorant';
+  font-weight: 700;
+}
+
+h3 {
+    font-family: 'Raleway';
+    font-weight: 500;
+    font-size: 24px;
+}
+
+p {
+    font-family: 'Raleway';
+    font-weight: 400;
+    font-size: 18px;
 }
 
 /* МЕНЮ */
@@ -101,10 +148,15 @@ h2 {
 
 /* ШАПКА */
 .header {
-  display: flex;
+  width: 100%;
+}
+
+.header .row {
+    justify-content: space-evenly;
 }
 
 .header h1{
+  width: 630px;
   font-size: 86px;
   color: var(--text-accent);
   position: relative;
@@ -112,6 +164,212 @@ h2 {
   margin-top: 39px;
 }
 
+.header .image {
+    width: 630px;
+    height: auto;
+}
+
+.header .text {
+    width: 502px;
+    height: auto;
+}
+
 .header h2 {
-  font-size: 46px;
+  font-size: 64px;
+  max-width: 502px;
+  margin-top: 102px;
+  margin-bottom: 0px;
+  line-height: 60px;
+}
+
+.header p {
+    font-family: 'Raleway';
+    font-weight: 300;
+    font-size: 18px;
+    margin-top: 15px;
+    margin-bottom: 0px;
+    max-width: 459px;
+    line-height: 100%;
+}
+
+.header_btn {
+    width: 240px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 76px;
+    margin-left: 221px
+}
+
+.header_btn a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 130px;
+    height: 130px;
+    background-color: var(--text-accent);
+    border-radius: 50%;
+    color: var(--text-light);
+    font-family: 'Raleway';
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* ДОСЯГНЕННЯ */
+.achives {
+    height: 267px;
+    background-color: #E3D7C880;
+    margin-top: 95px;
+}
+
+.achives .row {
+    height: 267px;
+    align-items: center;
+}
+
+.achives h2 {
+    margin: 0;
+    font-size: 64px;
+    color: var(--text-accent);
+}
+
+.achives p {
+    margin: 0;
+    font-family: 'Raleway';
+    font-weight: 400;
+    font-size: 18px;
+    position: relative;
+    margin-left: 33px;
+}
+
+.achive {
+    max-width: 220px;
+}
+
+/* ПРО НАС */
+.about {
+    margin-top: 160px;
+}
+
+.about .left {
+    max-width: 432px;
+    height: 395px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.about .crop-box {
+    width: 463px;
+    height: 395px;
+    overflow: hidden;
+}
+
+.about h2 {
+    font-size: 54px;
+}
+
+.about a {
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 18px;
+}
+ .about a > img {
+    position: relative;
+    top: -12px;
+ }
+
+ /* ПОСЛУГИ */
+
+ .cervices {
+    margin-top: 160px;
+ }
+
+ .cervice {
+    margin: 80px 0;
+ }
+
+ .cervice:first-of-type {
+    margin-top: 19px;
+ }
+
+ .cervices h2 {
+    font-size: 54px;
+ }
+
+ .cervices .crop-box {
+    width: 460px;
+    height: 284px;
+    overflow: hidden;
+ }
+
+ .cervices .row {
+    align-items: center;
+ }
+
+ .cervices .text {
+    width: 460px;
+ }
+
+ .row-reverse {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+ }
+
+ /* СЕРТИФІКАТИ */
+ .certificates {
+    height: 596px;
+    margin-top: 200px;
+    background-color: #E3D7C880;
+}
+
+.certificates .left {
+    max-width: 432px;
+    height: 395px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.certificates .crop-box {
+    position: relative;
+    top: -40px;
+    width: 460px;
+    height: 555px;
+    overflow: hidden;
+}
+
+.certificates .text {
+    max-width: 336px;
+}
+
+.certificates .row {
+    align-items: center;
+}
+
+.certificates h2 {
+    font-size: 54px;
+    line-height: 60px;
+    margin-bottom: 30px;
+}
+
+.certificates a {
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.certificates a > img {
+    position: relative;
+    top: -12px;
+}
+
+.certificates h1 {
+    font-size: 86px;
+    color: var(--text-bg);
+    position: relative;
+    left: 100px;
+    top: 30px;
 }
