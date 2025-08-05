@@ -124,20 +124,46 @@ p {
     font-size: 18px;
 }
 
+/* КНОПКА */
 .btn {
+    width: fit-content;
     position: relative;
     font-family: 'Raleway';
     font-weight: 700;
     font-size: 18px;
-    text-decoration: underline;
-    text-decoration-thickness: 0.9px;
-    text-underline-offset: 4.7px;   
+    padding-right: 40px;
 }
 
-.btn > img {
-    position: absolute;
-    top: 18px;
-    left: 70%;
+.btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  width: 100%;
+  background-color: var(--text-dark);
+  transition: width 0.5s ease;
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 99%;
+  right: 0;
+  width: 6px;
+  height: 6px;
+  border-right: 1px solid var(--text-dark);
+  border-bottom: 1px solid var(--text-dark);
+  transform: translateY(-50%) rotate(-45deg);
+  transition: transform 0.5s ease;
+}
+
+.btn:hover::before {
+    width: calc(100% + 40px);
+}
+
+.btn:hover::after {
+    transform: translate(40px, -50%) rotate(-45deg);
 }
 
 /* МЕНЮ */
@@ -210,25 +236,41 @@ p {
 }
 
 .header_btn {
-    width: 240px;
+    width: 260px;
     display: flex;
     justify-content: space-between;
     margin-top: 76px;
-    margin-left: 221px
+    margin-left: 221px;
+    align-items: center;
 }
 
 .header_btn a {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 130px;
-    height: 130px;
+    width: 150px;
+    height: 150px;
     background-color: var(--text-accent);
     border-radius: 50%;
     color: var(--text-light);
     font-family: 'Raleway';
     font-size: 20px;
     font-weight: 500;
+    transition: background-color 0.3s ease;
+    position: relative;
+}
+
+.header_btn img {
+    transition: transform 0.3s ease;
+}
+
+.header_btn:hover a {
+    background-color: #d9c3a9;
+    color: var(--text-dark);
+}
+
+.header_btn:hover img {
+    transform: translateX(20px);
 }
 
 /* ДОСЯГНЕННЯ */
@@ -388,7 +430,7 @@ p {
     color: var(--text-bg);
     position: relative;
     left: 100px;
-    top: 30px;
+    top: 52px;
 }
 
 /* ВІДГУКИ */
