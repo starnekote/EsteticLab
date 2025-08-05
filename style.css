@@ -96,6 +96,7 @@ ul {
 }
 
 a {
+    font-family: "Raleway";
     text-decoration: none;
     color: var(--text-dark);
 }
@@ -121,6 +122,22 @@ p {
     font-family: 'Raleway';
     font-weight: 400;
     font-size: 18px;
+}
+
+.btn {
+    position: relative;
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 18px;
+    text-decoration: underline;
+    text-decoration-thickness: 0.9px;
+    text-underline-offset: 4.7px;   
+}
+
+.btn > img {
+    position: absolute;
+    top: 18px;
+    left: 70%;
 }
 
 /* МЕНЮ */
@@ -372,4 +389,184 @@ p {
     position: relative;
     left: 100px;
     top: 30px;
+}
+
+/* ВІДГУКИ */
+
+.reviews {
+    margin-top: 80px;
+}
+
+.reviews h2 {
+    font-size: 54px;
+    text-align: center;
+}
+
+.review {
+    position: relative;
+    width: 460px;
+    height: 343px;
+    background-color: #E3D7C880;
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+.review .crop-box {
+    position: relative;
+    left: 30px;
+    top: -40px;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.review h3 {
+    position: absolute;
+    left: 184px;
+    top: 38px;
+    font-size: 24px;
+}
+
+.review .nickname {
+    position: absolute;
+    left: 175px;
+    top: 96px;
+    font-size: 14px;
+}
+
+.review .text{
+    position: relative;
+    margin: 20px 37px;
+    width: 382px;
+    max-height: 174px;
+    font-size: 16px;
+}
+
+/* ЗАЯВКА */
+.request {
+    margin-top: 160px;
+}
+
+.request h2 {
+    font-size: 52px;
+}
+
+.request .crop-box {
+    width: 403px;
+    height: 455px;
+    overflow: hidden;
+    position: relative;
+}
+
+.request input {
+    width: 460px;
+    border: none;
+    border-bottom: 1px solid var(--text-dark);
+    margin: 27px 0;
+    outline: none;
+}
+
+.request input::placeholder {
+  font-family: 'Raleway';
+  font-size: 18px;
+  color: var(--text-dark);
+  font-weight: 400;            
+}
+
+.request p {
+    font-size: 14px;
+    max-width: 344px;
+}
+
+.request .text{
+    height: 455px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* ФУТЕР */
+
+.footer {
+    margin-top: 208px;
+}
+
+.footer h1 {
+    font-weight: 400;
+    font-size: 50px;
+    margin: 0;
+}
+
+.footer .social-media {
+    height: 35px;
+    margin: 14px 0 3px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.footer .social-media .crop-box {
+    width: 30px;
+    height: 35px;
+    overflow: hidden;
+}
+
+.footer .social-media .nickname {
+    margin: 0 6px;
+}
+
+.footer .adress {
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.footer .menu {
+    width: 403px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer .menu .info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+.footer .menu h3 {
+    margin: 20px 0 35px;
+    font-size: 14px;
+}
+
+.footer .menu p {
+    font-size: 14px;
+}
+
+.footer .menu ul {
+    padding: 0;
+    width: 133px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer .menu ul li {
+    margin: 0 0 14px 0;
+}
+
+.footer .policy {
+    margin: 68px 0 35px 0;
+    text-align: center;
+}
+
+.footer .policy p {
+    font-size: 14px;
+    margin: 0;
+}
+
+.footer .policy a {
+    font-weight: 600;
+    font-size: 14px;
 }
