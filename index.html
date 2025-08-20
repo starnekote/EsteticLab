@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="swiper-bundle.min.css">
     <title>EsteticLab</title>
 </head>
 <body>
@@ -137,18 +138,18 @@
                             </p>
                         </div>
                         <a class="btn" href="">Замовити сертифікат</a>
-                        <h1>EsteticLab</h1>
                     </div>
                 </div>
+            <h1>EsteticLab</h1>
             </div>
        </div>
        <!-- ВІДГУКИ -->
         <a id="reviews"></a>
         <div class="reviews">
-            <div class="container">
-                <h2>Відгуки</h2>
-                <div class="row">
-                    <div class="review col-6">
+            <h2>Відгуки</h2>
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="review swiper-slide">
                         <div class="crop-box"><img src="images/image 7.png" alt=""></div>
                         <h3>Анастасія Кравченко</h3>
                         <p class="nickname">@kravchenko.a</p>
@@ -158,7 +159,26 @@
                         а професійні та чуйні фахівці клініки проводять процедуру максимально комфортно для клієнта.
                         Окреме спасибі косметологу Ганні!</p>
                     </div>
-                    <div class="review col-6">
+                    <div class="review swiper-slide">
+                        <div class="crop-box"><img src="images/image 8.png" alt=""></div>
+                        <h3>Юлія Ковальчук</h3>
+                        <p class="nickname">@juuuliiakov</p>
+                        <p class="text">Дуже зручно, що всі процедури можна зробити 
+                        в одному місці! Якість послуг завжди на висоті, 
+                        я повністю довіряю майстрам салону. Люблю послугу в 4 руки - можна зекономити час, зробивши одночасно манікюр і педикюр 
+                        або ж зачіску та макіяж за годину. Рекомендую!</p>
+                    </div>
+                    <div class="review swiper-slide">
+                        <div class="crop-box"><img src="images/image 7.png" alt=""></div>
+                        <h3>Анастасія Кравченко</h3>
+                        <p class="nickname">@kravchenko.a</p>
+                        <p class="text">Лазерна епіляція в EsteticLab - найбільш ефективний і безболісний метод позбавлення 
+                        від небажаного волосся з усіх,
+                        що я пробувала. Результатом я більш ніж задоволена, 
+                        а професійні та чуйні фахівці клініки проводять процедуру максимально комфортно для клієнта.
+                        Окреме спасибі косметологу Ганні!</p>
+                    </div>
+                    <div class="review swiper-slide">
                         <div class="crop-box"><img src="images/image 8.png" alt=""></div>
                         <h3>Юлія Ковальчук</h3>
                         <p class="nickname">@juuuliiakov</p>
@@ -168,7 +188,9 @@
                         або ж зачіску та макіяж за годину. Рекомендую!</p>
                     </div>
                 </div>
-            <a class="btn" href="">Переглянути всі відгуки</a>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
         </div>
         <!-- ЗАЯВКА -->
@@ -224,6 +246,7 @@
             <div class="policy"><p>© EsteticLab, 2020 - 2022. Усі права захищені.</p> <a href="">Політика конфіденційності</a></div>
             </div>
         </div>
+<script src="swiper-bundle.min.js"></script>
 <script>
     function markCervices() {
   const container = document.querySelector('.cervices');
@@ -240,6 +263,18 @@
     }
   });
 }
+
+  const swiper = new Swiper('.swiper', {
+  direction: 'horizontal',
+  slidesPerView: 2,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true
+  },
+  navigation: {
+    prevEl: '.swiper-button-prev',
+    nextEl: '.swiper-button-next'
+  }});
 
 markCervices();
 </script>
