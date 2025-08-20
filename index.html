@@ -144,7 +144,7 @@
             </div>
        </div>
        <!-- ВІДГУКИ -->
-        <a id="reviews"></a>
+        <!-- <a id="reviews"></a>
         <div class="reviews">
             <h2>Відгуки</h2>
             <div class="swiper">
@@ -189,6 +189,54 @@
                     </div>
                 </div>
                 <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div> -->
+        <a id="reviews"></a>
+        <div class="swiper">
+            <h2>Відгуки</h2>
+            <div class="card-wrapper">
+                <ul class="card-list swiper-wrapper">
+                    <li class="card-item swiper-slide">
+                        <div class="crop-box"><img src="images/image 8.png" alt=""></div>
+                        <h3>Юлія Ковальчук</h3>
+                        <p class="nickname">@juuuliiakov</p>
+                        <p class="text">Дуже зручно, що всі процедури можна зробити 
+                        в одному місці! Якість послуг завжди на висоті, 
+                        я повністю довіряю майстрам салону. Люблю послугу в 4 руки - можна зекономити час, зробивши одночасно манікюр і педикюр 
+                        або ж зачіску та макіяж за годину. Рекомендую!</p>
+                    </li>
+                    <li class="card-item swiper-slide">
+                        <div class="crop-box"><img src="images/image 7.png" alt=""></div>
+                        <h3>Анастасія Кравченко</h3>
+                        <p class="nickname">@kravchenko.a</p>
+                        <p class="text">Лазерна епіляція в EsteticLab - найбільш ефективний і безболісний метод позбавлення 
+                        від небажаного волосся з усіх,
+                        що я пробувала. Результатом я більш ніж задоволена, 
+                        а професійні та чуйні фахівці клініки проводять процедуру максимально комфортно для клієнта.
+                        Окреме спасибі косметологу Ганні!</p>
+                    </li>
+                    <li class="card-item swiper-slide">
+                        <div class="crop-box"><img src="images/image 8.png" alt=""></div>
+                        <h3>Юлія Ковальчук</h3>
+                        <p class="nickname">@juuuliiakov</p>
+                        <p class="text">Дуже зручно, що всі процедури можна зробити 
+                        в одному місці! Якість послуг завжди на висоті, 
+                        я повністю довіряю майстрам салону. Люблю послугу в 4 руки - можна зекономити час, зробивши одночасно манікюр і педикюр 
+                        або ж зачіску та макіяж за годину. Рекомендую!</p>                        
+                    </li>
+                    <li class="card-item swiper-slide">
+                        <div class="crop-box"><img src="images/image 7.png" alt=""></div>
+                        <h3>Анастасія Кравченко</h3>
+                        <p class="nickname">@kravchenko.a</p>
+                        <p class="text">Лазерна епіляція в EsteticLab - найбільш ефективний і безболісний метод позбавлення 
+                        від небажаного волосся з усіх,
+                        що я пробувала. Результатом я більш ніж задоволена, 
+                        а професійні та чуйні фахівці клініки проводять процедуру максимально комфортно для клієнта.
+                        Окреме спасибі косметологу Ганні!</p>                        
+                    </li>
+                </ul>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
             </div>
@@ -264,13 +312,9 @@
   });
 }
 
-  const swiper = new Swiper('.swiper', {
-  direction: 'horizontal',
+new Swiper('.card-wrapper', {
   slidesPerView: 2,
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true
-  },
+  spaceBetween: 45,
   navigation: {
     prevEl: '.swiper-button-prev',
     nextEl: '.swiper-button-next'
