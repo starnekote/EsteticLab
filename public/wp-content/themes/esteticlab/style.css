@@ -1,0 +1,691 @@
+/* 
+Theme Name: Estetic Lab
+*/
+
+:root {
+  --text-dark: #2E2E2E;
+  --text-light: #FFFFFF;
+  --text-accent: #AF977A;
+  --text-bg: #FDFDFD;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('./assets/fonts/Raleway-Light') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('./assets/fonts/Raleway-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('./assets/fonts/Raleway-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('./assets/fonts/Raleway-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('./assets/fonts/Raleway-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cormorant';
+  src: url('./assets/fonts/Cormorant-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lovelace';
+  src: url('./assets/fonts/Lovelace-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+    margin: 0;
+    background-color: #FDFDFD;
+    color: var(--text-dark);
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 960px;
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  justify-content: space-between;
+}
+.col-3 {
+  width: 25%;
+}
+.col-4 {
+  width: 33.33%;
+}
+.col-6 {
+  width: 50%;
+}
+.col-8 {
+  width: 66.66%;
+}
+.col-9 {
+  width: 75%;
+}
+.col-12 {
+  width: 100%;
+}
+
+ul {
+    margin: 0;
+}
+
+a {
+    font-family: "Raleway";
+    text-decoration: none;
+    color: var(--text-dark);
+}
+
+h1 {
+  font-family: 'Lovelace';
+  font-weight: 400;
+}
+
+h2 {
+  margin: 0;
+  font-family: 'Cormorant';
+  font-weight: 700;
+}
+
+h3 {
+    font-family: 'Raleway';
+    font-weight: 500;
+    font-size: 24px;
+}
+
+p {
+    font-family: 'Raleway';
+    font-weight: 400;
+    font-size: 18px;
+}
+
+/* КНОПКА */
+.btn {
+    width: fit-content;
+    position: relative;
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 18px;
+    padding-right: 40px;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  width: 100%;
+  background-color: var(--text-dark);
+  transition: width 0.5s ease;
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 99%;
+  right: 0;
+  width: 6px;
+  height: 6px;
+  border-right: 1px solid var(--text-dark);
+  border-bottom: 1px solid var(--text-dark);
+  transform: translateY(-50%) rotate(-45deg);
+  transition: transform 0.5s ease;
+}
+
+.btn:hover::before {
+    width: calc(100% + 40px);
+}
+
+.btn:hover::after {
+    transform: translate(40px, -50%) rotate(-45deg);
+}
+
+/* МЕНЮ */
+.menu ul {
+    display: flex;
+    justify-content: end;
+    list-style: none;
+}
+
+.menu ul li {
+    margin-top: 44px;
+    margin-right: 64px;
+}
+
+.menu ul li:last-child {
+    margin-right: 104px;
+}
+
+.menu ul li a {
+    font-family: 'Raleway';
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--text-dark);
+}
+
+/* ШАПКА */
+.header {
+  width: 100%;
+}
+
+.header .row {
+    justify-content: space-evenly;
+}
+
+.header h1{
+  width: 630px;
+  font-size: 86px;
+  color: var(--text-accent);
+  position: relative;
+  margin-bottom: -47px;
+  margin-top: 39px;
+}
+
+.header .image {
+    width: 630px;
+    height: auto;
+}
+
+.header .text {
+    width: 502px;
+    height: auto;
+}
+
+.header h2 {
+  font-size: 64px;
+  max-width: 502px;
+  margin-top: 102px;
+  margin-bottom: 0px;
+  line-height: 60px;
+}
+
+.header p {
+    font-family: 'Raleway';
+    font-weight: 300;
+    font-size: 18px;
+    margin-top: 15px;
+    margin-bottom: 0px;
+    max-width: 459px;
+    line-height: 100%;
+}
+
+.header_btn {
+    width: 260px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 76px;
+    margin-left: 221px;
+    align-items: center;
+}
+
+.header_btn a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    background-color: var(--text-accent);
+    border-radius: 50%;
+    color: var(--text-light);
+    font-family: 'Raleway';
+    font-size: 20px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    position: relative;
+}
+
+.header_btn img {
+    transition: transform 0.3s ease;
+}
+
+.header_btn:hover a {
+    background-color: #d9c3a9;
+    color: var(--text-dark);
+}
+
+.header_btn:hover img {
+    transform: translateX(20px);
+}
+
+/* ДОСЯГНЕННЯ */
+.achives {
+    height: 267px;
+    background-color: #E3D7C880;
+    margin-top: 95px;
+}
+
+.achives .row {
+    height: 267px;
+    align-items: center;
+}
+
+.achives h2 {
+    margin: 0;
+    font-size: 64px;
+    color: var(--text-accent);
+}
+
+.achives p {
+    margin: 0;
+    font-family: 'Raleway';
+    font-weight: 400;
+    font-size: 18px;
+    position: relative;
+    margin-left: 33px;
+}
+
+.achive {
+    max-width: 220px;
+}
+
+/* ПРО НАС */
+.about {
+    margin-top: 160px;
+}
+
+.about .left {
+    max-width: 432px;
+    height: 395px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.about .crop-box {
+    width: 463px;
+    height: 395px;
+    overflow: hidden;
+}
+
+.about h2 {
+    font-size: 54px;
+}
+
+.about a {
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 18px;
+}
+ .about a > img {
+    position: relative;
+    top: -12px;
+ }
+
+ /* ПОСЛУГИ */
+
+ .cervices {
+    margin-top: 160px;
+ }
+
+ .cervice {
+    margin: 80px 0;
+ }
+
+ .cervice:first-of-type {
+    margin-top: 19px;
+ }
+
+ .cervices h2 {
+    font-size: 54px;
+ }
+
+ .cervices .crop-box {
+    width: 460px;
+    height: 284px;
+    overflow: hidden;
+ }
+
+ .cervices .row {
+    align-items: center;
+ }
+
+ .cervices .text {
+    width: 460px;
+ }
+
+ .row-reverse {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+ }
+
+ /* СЕРТИФІКАТИ */
+ .certificates {
+    height: 596px;
+    margin-top: 200px;
+    margin-bottom: 80px;
+    background-color: #E3D7C880;
+}
+
+.certificates .container {
+    position: relative;
+    height: 596px;
+}
+
+.certificates .left {
+    max-width: 432px;
+    height: 395px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.certificates .crop-box {
+    position: relative;
+    top: -40px;
+    width: 460px;
+    height: 555px;
+    overflow: hidden;
+}
+
+.certificates .text {
+    max-width: 336px;
+}
+
+.certificates .row {
+    align-items: center;
+}
+
+.certificates h2 {
+    font-size: 54px;
+    line-height: 60px;
+    margin-bottom: 30px;
+}
+
+.certificates a {
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.certificates a > img {
+    position: relative;
+    top: -12px;
+}
+
+.certificates h1 {
+    margin: 0;
+    font-size: 86px;
+    color: var(--text-bg);
+    position: absolute;
+    top: 503px;
+    left: 70%;
+}
+
+/* ВІДГУКИ */
+
+.swiper {
+    --swiper-navigation-color: var(--text-accent);
+    width: 1060px;
+    height: 480px;
+}
+
+.reviews {
+    margin-top: 80px;
+}
+
+.reviews h2 {
+    font-size: 54px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.review {
+    position: relative;
+    margin-top: 40px;
+    background-color: #E3D7C880;
+}
+
+.review .crop-box {
+    position: relative;
+    left: 30px;
+    top: -40px;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.review h3 {
+    position: absolute;
+    left: 184px;
+    top: 38px;
+    font-size: 24px;
+}
+
+.review .nickname {
+    position: absolute;
+    left: 175px;
+    top: 96px;
+    font-size: 14px;
+}
+
+.review .text{
+    position: relative;
+    padding: 20px 37px;
+    width: 382px;
+    max-height: 174px;
+    font-size: 16px;
+}
+
+/* ВІДГУКИ ТЕСТ */
+
+.swiper h2 {
+    font-size: 54px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.card-list{
+    padding: 0;
+}
+
+.swiper-slide {
+    height: 343px !important; 
+}
+.card-wrapper {
+    max-width: 1060px;
+    margin: 0 33px 35px;
+    padding: 43px 10px;
+    overflow: hidden;
+    --swiper-navigation-size: 44px;
+    --swiper-navigation-top-offset: 59%;
+    --swiper-navigation-sides-offset: 0px; 
+    --swiper-navigation-color: var(--text-accent);
+}
+
+.card-list .card-item {
+    display: block;
+    box-sizing: border-box;
+    background-color: #E3D7C880;
+    padding: 37px;
+    list-style: none;
+}
+
+.card-list .card-item .crop-box {
+    position: absolute;
+    left: 30px;
+    top: -40px;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.card-list .card-item h3 {
+    font-size: 24px;
+    margin: 0 0 0 147px;
+}
+
+.card-list .card-item .nickname {
+    font-size: 14px;
+    margin: 30px 0 0 138px;
+}
+
+.card-list .card-item .text{
+    width: auto;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+
+
+/* ЗАЯВКА */
+.request {
+    margin-top: 160px;
+}
+
+.request h2 {
+    font-size: 52px;
+}
+
+.request .crop-box {
+    width: 403px;
+    height: 455px;
+    overflow: hidden;
+    position: relative;
+}
+
+.request input {
+    width: 460px;
+    border: none;
+    border-bottom: 1px solid var(--text-dark);
+    margin: 27px 0;
+    outline: none;
+}
+
+.request input::placeholder {
+  font-family: 'Raleway';
+  font-size: 18px;
+  color: var(--text-dark);
+  font-weight: 400;            
+}
+
+.request p {
+    font-size: 14px;
+    max-width: 344px;
+}
+
+.request .text{
+    height: 455px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* ФУТЕР */
+
+.footer {
+    margin-top: 208px;
+}
+
+.footer h1 {
+    font-weight: 400;
+    font-size: 50px;
+    margin: 0;
+}
+
+.footer .social-media {
+    height: 35px;
+    margin: 14px 0 3px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.footer .social-media .crop-box {
+    width: 30px;
+    height: 35px;
+    overflow: hidden;
+}
+
+.footer .social-media .nickname {
+    margin: 0 6px;
+}
+
+.footer .adress {
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.footer .menu {
+    width: 403px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer .menu .info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+.footer .menu h3 {
+    margin: 20px 0 35px;
+    font-size: 14px;
+}
+
+.footer .menu p {
+    font-size: 14px;
+}
+
+.footer .menu ul {
+    padding: 0;
+    width: 133px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer .menu ul li {
+    margin: 0 0 14px 0;
+}
+
+.footer .policy {
+    margin: 68px 0 35px 0;
+    text-align: center;
+}
+
+.footer .policy p {
+    font-size: 14px;
+    margin: 0;
+}
+
+.footer .policy a {
+    font-weight: 600;
+    font-size: 14px;
+}
