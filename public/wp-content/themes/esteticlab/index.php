@@ -1,17 +1,20 @@
+<!--
+Template Name: Головна
+-->
 <?php get_header(); ?>
     <!-- ШАПКА -->
      <div class="header">
         <div class="row">
             <div class="image col-6">
-                <h1>EsteticLab</h1>
-                <img src="./images/pexels-arina-krasnikova-6663361 1.png" alt="image">
+                <h1><?php echo SCF::get('nickname'); ?></h1>
+                <img src="<?php echo wp_get_attachment_url(SCF::get('header_img'))?>" alt="image">
             </div>
             <div class="text col-6">
-                <h2>Клініка естетичної косметології EsteticLab</h2>
-                <p>Усі необхідні beauty-послуги в одному місці. Лазерна епіляція, косметологія, масаж та корекція фігури, перукарські послуги, макіяж, нігтьовий сервіс.</p>
+                <h2><?php echo SCF::get('header_title'); ?></h2>
+                <p><?php echo SCF::get('header_text'); ?></p>
                 <div class="header_btn">
-                    <img src="./images/Arrow 1.svg" alt="Arrow">
-                    <a href="#request">Записатися</a> 
+                    <img src="<?php echo wp_get_attachment_url(SCF::get('arrow'))?>" alt="Arrow">
+                    <a href="#request"><?php echo SCF::get('header_call_to_action'); ?></a> 
                 </div>
             </div>
         </div>
