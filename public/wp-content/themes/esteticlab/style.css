@@ -279,13 +279,11 @@ p {
 
 /* ДОСЯГНЕННЯ */
 .achives {
-    height: 267px;
     background-color: #E3D7C880;
     margin-top: 95px;
 }
 
 .achives .row {
-    height: 267px;
     align-items: center;
 }
 
@@ -302,10 +300,11 @@ p {
     font-size: 18px;
     position: relative;
     margin-left: 33px;
+    max-width: 185px
 }
 
 .achive {
-    max-width: 220px;
+    padding: 80px 0;
 }
 
 /* ПРО НАС */
@@ -343,13 +342,24 @@ p {
 
  /* ПОСЛУГИ */
 
- .cervices {
+  .cervices {
     margin-top: 160px;
  }
 
  .cervice {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin: 80px 0;
  }
+
+ .cervice:nth-child(even) .crop-box {
+  order: 2; /* картинка справа */
+}
+
+.cervice:nth-child(even) .text {
+  order: 1; /* текст зліва */
+}
 
  .cervice:first-of-type {
     margin-top: 19px;
@@ -371,14 +381,6 @@ p {
 
  .cervices .text {
     width: 460px;
- }
-
- .row-reverse {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: row-reverse;
  }
 
  /* СЕРТИФІКАТИ */

@@ -23,18 +23,12 @@ Template Name: Головна
       <div class="achives">
         <div class="container">
             <div class="row">
-                <div class="achive">
-                    <h2>5000+</h2>
-                    <p>виконаних процедур та наданих послуг</p>
-                </div>
-                <div class="achive">
-                    <h2>3900+</h2>
-                    <p>пацієнтів відвідало нас</p>
-                </div>
-                <div class="achive">
-                    <h2>50+</h2>
-                    <p>навчальних програм пройдено лікарями</p>
-                </div>
+                <?php $loop = SCF::get('achives');
+                foreach($loop as $row){?>
+                <div class="col-4 achive">
+                    <h2><?php echo $row['achive_num']?></h2>
+                    <p><?php echo $row['achive_text']?></p>
+                </div><?php } ?>
             </div>
         </div>
       </div>
@@ -45,16 +39,12 @@ Template Name: Головна
                 <div class="row">
                     <div class="left col-6">
                         <div class="text">
-                            <h2>Про нас</h2>
-                            <p>Ми застосовуємо методи інноваційної медичної косметології, щоб зберегти вашу індивідуальність,
-                            природну привабливість та чарівність. <br><br> Ефективно та безпечно допомагаємо впоратися з віковими змінами шкіри, 
-                            гіперпігментацією, акне та пост-акне. <br><br> Створюємо та підтримуємо стрункість, 
-                            пружність шкіри без целюліту, небажаного волосся та інших зовнішніх недосконалостей.
-                            </p>
+                            <h2><?php echo SCF::get('about_title', 22); ?></h2>
+                            <p><?php echo SCF::get('about_text', 22); ?></p>
                         </div>
-                        <a class="btn" href="">Записатися на консультацію</a>
+                        <a class="btn" href="#request"><?php echo SCF::get('about_cta', 22); ?></a>
                     </div>
-                    <div class="crop-box col-6"><img src="images/image 11.png" alt="image"></div>
+                    <div class="crop-box col-6"><img src="<?php echo wp_get_attachment_url(SCF::get('about_img', 22))?>" alt="image"></div>
                 </div>
             </div>
        </div>
@@ -63,49 +53,17 @@ Template Name: Головна
        <div class="cervices">
             <div class="container">
                     <h2>Наші послуги</h2>
-                    <div class="cervice">
-                        <div class="crop-box col-6"><img src="images/pexels.png" alt=""></div>
-                        <div class="text col-6">
-                            <h3>Лазерна епіляція</h3>
-                            <p>Ефективний метод радикального видалення волосся із руйнуванням волосяних фолікулів за допомогою діодного лазерного випромінювання</p>
-                        </div>
+                    <div class="row">
+                        <?php $loop = SCF::get('cervice', 30);
+                        foreach($loop as $row){?>
+                        <div class="col-12 cervice">
+                            <div class="crop-box col-6"><img src="<?php echo wp_get_attachment_url($row['cervice_img'])?>" alt=""></div>
+                            <div class="text col-6">
+                                <h3><?php echo $row['cervice_title']?></h3>
+                                <p><?php echo $row['cevice_text']?></p>
+                            </div> 
+                        </div> <?php } ?>
                     </div>
-                    <div class="cervice">
-                        <div class="crop-box col-6"><img src="images/pexels-ivan-samkov-5659056 1.png" alt=""></div>
-                        <div class="text col-6">
-                            <h3>Косметологія</h3>
-                            <p>Для Вас розробляємо комплексні програми з очищення, омолодження та відновлення шкіри обличчя. Апаратна косметологія.</p>
-                        </div>
-                    </div>
-                    <div class="cervice">
-                        <div class="crop-box col-6"><img src="images/pexels-elina-fairytale-3865803 1.png" alt=""></div>
-                        <div class="text col-6">
-                            <h3>Масажі</h3>
-                            <p>Пропонуємо більше 15 видів масажу: загальний масаж, масаж обличчя, стоун-масаж, реабілітаційний, вакуумний, антистресовий, лімфодренажний.</p>
-                        </div>
-                    </div>
-                    <div class="cervice">
-                        <div class="crop-box col-6"><img src="images/pexels-cottonbro-3993451 1.png" alt=""></div>
-                        <div class="text col-6">
-                            <h3>Перукарські послуги</h3>
-                            <p>Ми надаємо різноманітні послуги з догляду за вашим волоссям! Преміальне відновлення, фарбування, стрижки та укладання.</p>
-                        </div>
-                    </div>
-                    <div class="cervice">
-                        <div class="crop-box col-6"><img src="images/pexels-cottonbro-3997391 1.png" alt=""></div>
-                        <div class="text col-6">
-                            <h3>Нігтьовий сервіс</h3>
-                            <p>У нашому салоні Ви можете виконати всі необхідні послуги нігтьового сервісу: манікюр, педикюр, а також подологічне лікування нігтів.</p>
-                        </div>
-                    </div>
-                    <div class="cervice">
-                        <div class="crop-box col-6"><img src="images/pexels-maria-gloss-4197807 1.png" alt=""></div>
-                        <div class="text col-6">
-                            <h3>Макіяж</h3>
-                            <p>Якщо потрібно виглядати бездоганно для будь-якого заходу – наші візажисти із задоволенням допоможуть завершити образ за допомогою макіяжу.</p>
-                        </div>
-                    </div>
-                </div>
             </div>
        </div>
     <!-- СЕРТИФІКАТИ -->
