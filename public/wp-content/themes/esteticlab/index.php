@@ -71,18 +71,16 @@ Template Name: Головна
        <div class="certificates">
             <div class="container">
                 <div class="row">
-                    <div class="crop-box col-6"><img src="images/pexels-ivan-samkov-5659056 1.png" alt="image"></div>
+                    <div class="crop-box col-6"><img src="<?php echo wp_get_attachment_url(SCF::get('certificates_img', 25))?>" alt="image"></div>
                     <div class="left col-6">
                         <div class="text">
-                            <h2>Подарункові сертифікати</h2>
-                            <p>Ви можете замовити подарункові сертифікати на будь-яку суму. <br><br>
-                            Ми цінуємо Ваш час. Тому що знаємо, як буває важко виділити кілька годин на догляд за собою.
-                            </p>
+                            <h2><?php echo SCF::get('certificates_title', 25); ?></h2>
+                            <p><?php echo SCF::get('certificates_text', 25); ?></p>
                         </div>
-                        <a class="btn" href="">Замовити сертифікат</a>
+                        <a class="btn" href=""><?php echo SCF::get('certificates_cta', 25); ?></a>
                     </div>
                 </div>
-            <h1>EsteticLab</h1>
+            <h1><?php echo SCF::get('nickname'); ?></h1>
             </div>
        </div>
     <!-- ВІДГУКИ -->
@@ -91,44 +89,15 @@ Template Name: Головна
             <h2>Відгуки</h2>
             <div class="card-wrapper">
                 <ul class="card-list swiper-wrapper">
-                    <li class="card-item swiper-slide">
-                        <div class="crop-box"><img src="images/image 8.png" alt=""></div>
-                        <h3>Юлія Ковальчук</h3>
-                        <p class="nickname">@juuuliiakov</p>
-                        <p class="text">Дуже зручно, що всі процедури можна зробити 
-                        в одному місці! Якість послуг завжди на висоті, 
-                        я повністю довіряю майстрам салону. Люблю послугу в 4 руки - можна зекономити час, зробивши одночасно манікюр і педикюр 
-                        або ж зачіску та макіяж за годину. Рекомендую!</p>
-                    </li>
-                    <li class="card-item swiper-slide">
-                        <div class="crop-box"><img src="images/image 7.png" alt=""></div>
-                        <h3>Анастасія Кравченко</h3>
-                        <p class="nickname">@kravchenko.a</p>
-                        <p class="text">Лазерна епіляція в EsteticLab - найбільш ефективний і безболісний метод позбавлення 
-                        від небажаного волосся з усіх,
-                        що я пробувала. Результатом я більш ніж задоволена, 
-                        а професійні та чуйні фахівці клініки проводять процедуру максимально комфортно для клієнта.
-                        Окреме спасибі косметологу Ганні!</p>
-                    </li>
-                    <li class="card-item swiper-slide">
-                        <div class="crop-box"><img src="images/image 8.png" alt=""></div>
-                        <h3>Юлія Ковальчук</h3>
-                        <p class="nickname">@juuuliiakov</p>
-                        <p class="text">Дуже зручно, що всі процедури можна зробити 
-                        в одному місці! Якість послуг завжди на висоті, 
-                        я повністю довіряю майстрам салону. Люблю послугу в 4 руки - можна зекономити час, зробивши одночасно манікюр і педикюр 
-                        або ж зачіску та макіяж за годину. Рекомендую!</p>                        
-                    </li>
-                    <li class="card-item swiper-slide">
-                        <div class="crop-box"><img src="images/image 7.png" alt=""></div>
-                        <h3>Анастасія Кравченко</h3>
-                        <p class="nickname">@kravchenko.a</p>
-                        <p class="text">Лазерна епіляція в EsteticLab - найбільш ефективний і безболісний метод позбавлення 
-                        від небажаного волосся з усіх,
-                        що я пробувала. Результатом я більш ніж задоволена, 
-                        а професійні та чуйні фахівці клініки проводять процедуру максимально комфортно для клієнта.
-                        Окреме спасибі косметологу Ганні!</p>                        
-                    </li>
+                    <?php $loop = SCF::get('reviews', 32);
+                    foreach($loop as $row){?>                    
+                        <li class="card-item swiper-slide">
+                            <div class="crop-box"><img src="<?php echo wp_get_attachment_url($row['review_img'])?>" alt=""></div>
+                            <h3><?php echo $row['review_name']?></h3>
+                            <p class="nickname"><?php echo $row['review_nickname']?></p>
+                            <p class="text"><?php echo $row['review_text']?></p>
+                        </li> 
+                    <?php } ?>
                 </ul>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
